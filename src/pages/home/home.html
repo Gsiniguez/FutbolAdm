@@ -1,0 +1,210 @@
+<ion-header>
+  <ion-navbar>
+
+    <ion-title class="titulo">
+      {{canchatitulo}}
+    </ion-title>
+
+
+
+    <ion-buttons end>
+
+      <button ion-button (click)="editarDatos()">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+
+      <button ion-button (click)="nuevaCancha()">
+        <ion-icon name="add">
+          <ion-icon name="football"></ion-icon>
+        </ion-icon>
+      </button>
+
+      <button ion-button (click)="borrarCancha()">
+        <ion-icon name="remove">
+          <ion-icon name="football"></ion-icon>
+        </ion-icon>
+      </button>
+
+      <button ion-button (click)="logout()" >
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="fondo">
+  <ion-row>
+    <ion-col align-self-center>
+
+      <ion-item class="fecha">
+        <ion-label>FECHA:</ion-label>
+        <ion-datetime displayFormat="D/MM/YYYY" [(ngModel)]="today" min="{{minday}}" max="{{maxday}}" (ionChange)="onDateClick()"></ion-datetime>
+      </ion-item>
+
+      <ion-list>
+
+        <ion-item class="lista">
+          <ion-label>12:00</ion-label>
+          <ion-toggle [(ngModel)]="horas.docepm" (ionChange)="updateHora()"></ion-toggle>
+        </ion-item>
+
+        <ion-item class="lista">
+          <ion-label>13:00</ion-label>
+          <ion-toggle [(ngModel)]="horas.unapm" (ionChange)="updateHora()"></ion-toggle>
+        </ion-item>
+
+        <ion-item class="lista">
+          <ion-label>14:00</ion-label>
+          <ion-toggle [(ngModel)]="horas.dospm" (ionChange)="updateHora()"></ion-toggle>
+        </ion-item>
+
+        <ion-item class="lista">
+          <ion-label>15:00</ion-label>
+          <ion-toggle [(ngModel)]="horas.trespm" (ionChange)="updateHora()"></ion-toggle>
+        </ion-item>
+
+        <ion-item class="lista">
+          <ion-label>16:00</ion-label>
+          <ion-toggle [(ngModel)]="horas.cuatropm" (ionChange)="updateHora()"></ion-toggle>
+        </ion-item>
+
+        <ion-item class="lista">
+          <ion-label>17:00</ion-label>
+          <ion-toggle [(ngModel)]="horas.cincopm" (ionChange)="updateHora()"></ion-toggle>
+        </ion-item>
+
+        <ion-item class="lista">
+          <ion-label>18:00</ion-label>
+          <ion-toggle [(ngModel)]="horas.seispm" (ionChange)="updateHora()"></ion-toggle>
+        </ion-item>
+
+        <ion-item class="lista">
+          <ion-label>19:00</ion-label>
+          <ion-toggle [(ngModel)]="horas.sietepm" (ionChange)="updateHora()"></ion-toggle>
+        </ion-item>
+
+        <ion-item class="lista">
+          <ion-label>20:00</ion-label>
+          <ion-toggle [(ngModel)]="horas.ochopm" (ionChange)="updateHora()"></ion-toggle>
+        </ion-item>
+
+        <ion-item class="lista">
+          <ion-label>21:00</ion-label>
+          <ion-toggle [(ngModel)]="horas.nuevepm" (ionChange)="updateHora()"></ion-toggle>
+        </ion-item>
+
+        <ion-item class="lista">
+          <ion-label>22:00</ion-label>
+          <ion-toggle [(ngModel)]="horas.diezpm" (ionChange)="updateHora()"></ion-toggle>
+        </ion-item>
+
+        <ion-item class="lista">
+          <ion-label>23:00</ion-label>
+          <ion-toggle [(ngModel)]="horas.oncepm" (ionChange)="updateHora()"></ion-toggle>
+        </ion-item>
+
+        <ion-item class="lista">
+          <ion-label>00:00</ion-label>
+          <ion-toggle [(ngModel)]="horas.doceam" (ionChange)="updateHora()"></ion-toggle>
+        </ion-item>
+
+        <ion-item class="lista">
+          <ion-label>01:00</ion-label>
+          <ion-toggle [(ngModel)]="horas.unaam" (ionChange)="updateHora()"></ion-toggle>
+        </ion-item>
+
+        <ion-item class="lista">
+          <ion-label>02:00</ion-label>
+          <ion-toggle [(ngModel)]="horas.dosam" (ionChange)="updateHora()"></ion-toggle>
+        </ion-item>
+
+        <ion-item class="lista">
+          <ion-label>03:00</ion-label>
+          <ion-toggle [(ngModel)]="horas.tresam" (ionChange)="updateHora()"></ion-toggle>
+        </ion-item>
+
+        <ion-item class="lista">
+          <ion-label>04:00</ion-label>
+          <ion-toggle [(ngModel)]="horas.cuatroam" (ionChange)="updateHora()"></ion-toggle>
+        </ion-item>
+
+        <ion-item class="lista">
+          <ion-label>05:00</ion-label>
+          <ion-toggle [(ngModel)]="horas.cincoam" (ionChange)="updateHora()"></ion-toggle>
+        </ion-item>
+
+        <ion-item class="lista">
+          <ion-label>06:00</ion-label>
+          <ion-toggle [(ngModel)]="horas.seisam" (ionChange)="updateHora()"></ion-toggle>
+        </ion-item>
+
+        <ion-item class="lista">
+          <ion-label>07:00</ion-label>
+          <ion-toggle [(ngModel)]="horas.sieteam" (ionChange)="updateHora()"></ion-toggle>
+        </ion-item>
+
+        <ion-item class="lista">
+          <ion-label>08:00</ion-label>
+          <ion-toggle [(ngModel)]="horas.ochoam" (ionChange)="updateHora()"></ion-toggle>
+        </ion-item>
+
+        <ion-item class="lista">
+          <ion-label>09:00</ion-label>
+          <ion-toggle [(ngModel)]="horas.nueveam" (ionChange)="updateHora()"></ion-toggle>
+        </ion-item>
+
+        <ion-item class="lista">
+          <ion-label>10:00</ion-label>
+          <ion-toggle [(ngModel)]="horas.diezam" (ionChange)="updateHora()"></ion-toggle>
+        </ion-item>
+
+        <ion-item class="lista">
+          <ion-label>11:00</ion-label>
+          <ion-toggle [(ngModel)]="horas.onceam" (ionChange)="updateHora()"></ion-toggle>
+        </ion-item>
+
+      </ion-list>
+    </ion-col>
+  </ion-row>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="cancha">
+      <ion-segment-button *ngIf="mostrarCancha1" (click)="selectCancha('Cancha1')" value="Cancha1">
+        Cancha1
+      </ion-segment-button>
+
+      <ion-segment-button *ngIf="mostrarCancha2" (click)="selectCancha('Cancha2')" value="Cancha2">
+        Cancha2
+      </ion-segment-button>
+
+      <ion-segment-button *ngIf="mostrarCancha3" (click)="selectCancha('Cancha3')" value="Cancha3">
+        Cancha3
+      </ion-segment-button>
+
+      <ion-segment-button *ngIf="mostrarCancha4" (click)="selectCancha('Cancha4')" value="Cancha4">
+        Cancha4
+      </ion-segment-button>
+
+      <ion-segment-button *ngIf="mostrarCancha5" (click)="selectCancha('Cancha5')" value="Cancha5">
+        Cancha5
+      </ion-segment-button>
+
+      <ion-segment-button *ngIf="mostrarCancha6" (click)="selectCancha('Cancha6')" value="Cancha6">
+        Cancha6
+      </ion-segment-button>
+
+      <ion-segment-button *ngIf="mostrarCancha7" (click)="selectCancha('Cancha7')" value="Cancha7">
+        Cancha7
+      </ion-segment-button>
+
+      <ion-segment-button *ngIf="mostrarCancha8" (click)="selectCancha('Cancha8')" value="Cancha8">
+        Cancha8
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-footer>

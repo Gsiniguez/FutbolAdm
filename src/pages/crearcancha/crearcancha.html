@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Crear Cancha</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="fondo">
+  <ion-item class="lista">
+    <ion-label>Nombre</ion-label>
+    <ion-select [(ngModel)]="cancha.nombre">
+      <ion-option value="Cancha1">Cancha 1</ion-option>
+      <ion-option value="Cancha2">Cancha 2</ion-option>
+      <ion-option value="Cancha3">Cancha 3</ion-option>
+      <ion-option value="Cancha4">Cancha 4</ion-option>
+      <ion-option value="Cancha5">Cancha 5</ion-option>
+      <ion-option value="Cancha6">Cancha 6</ion-option>
+      <ion-option value="Cancha7">Cancha 7</ion-option>
+      <ion-option value="Cancha8">Cancha 8</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-row>
+    <ion-col>
+      <button class="submit-btn" type="submit" ion-button full block (click)="canchaNueva(cancha,horas)">Crear Cancha</button>
+    </ion-col>
+  </ion-row>
+</ion-content>

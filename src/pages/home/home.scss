@@ -1,0 +1,44 @@
+page-home {
+
+    .fondo{
+        background-color: #009c03
+    }
+
+    .titulo{
+        align-items: center;
+        text-align: center;
+    }
+
+    .item{
+        background-color: #ffffff;
+    }
+    .fecha{
+        border-radius: 30px;
+        margin-bottom: 10px;
+        background-color: #ffffff
+    }
+
+    ion-row {
+        align-items: center;
+        text-align: center;
+
+      }
+  
+    .lista {
+        border-radius: 30px !important;
+        padding-left: 30px !important;
+        font-size: 0.9em;
+        margin-bottom: 10px;
+        border: 1px solid #ffffff;
+        border-bottom: 0px !important;
+        box-shadow: none !important;
+    }
+
+    ion-list {
+
+    }
+
+    ion-col {
+      
+    }
+}

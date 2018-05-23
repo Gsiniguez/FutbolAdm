@@ -1,0 +1,26 @@
+export interface IHoras{
+    doceam:boolean;
+    unaam:boolean;
+    dosam:boolean;
+    tresam:boolean;
+    cuatroam:boolean;
+    cincoam:boolean;
+    seisam:boolean;
+    sieteam:boolean;
+    ochoam:boolean;
+    nueveam:boolean;
+    diezam:boolean;
+    onceam:boolean;
+    docepm:boolean;
+    unapm:boolean;
+    dospm:boolean;
+    trespm:boolean;
+    cuatropm:boolean;
+    cincopm:boolean;
+    seispm:boolean;
+    sietepm:boolean;
+    ochopm:boolean;
+    nuevepm:boolean;
+    diezpm:boolean;
+    oncepm:boolean;
+}
